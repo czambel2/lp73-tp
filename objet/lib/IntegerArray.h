@@ -10,7 +10,9 @@
  * - void set(int i, int v) pour modifier le i-ième élément.
  */
 
-class IntegerArray {
+#include "IntegerContainer.h"
+
+class IntegerArray: public IntegerContainer {
 	protected:
 		int *t;
 		int nb;

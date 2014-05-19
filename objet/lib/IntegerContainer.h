@@ -10,23 +10,18 @@
  * - void set(int i, int v) pour modifier le i-ième élément.
  */
 
-#include "IntegerContainer.h"
-
-class IntegerLinkedList: public IntegerContainer {
+class IntegerContainer {
 	protected:
-		int value;
-		IntegerLinkedList *next;
+		int *t;
+		int nb;
 	
 	public:
-		IntegerLinkedList(int value);
-		~IntegerLinkedList();
-		void pushback(int v);
-		int at(int i);
-		void popback();
-		int nb();
-		int front();
-		int back();
-		void set(int i, int v);
-		void display();
+		virtual void pushback(int v) = 0;
+		virtual int at(int i) = 0;
+		virtual void popback() = 0;
+		virtual int front() = 0;
+		virtual int back() = 0;
+		virtual void set(int i, int v) = 0;
+		virtual void display() = 0;
 };
 
