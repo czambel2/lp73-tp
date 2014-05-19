@@ -10,14 +10,14 @@
  * - void set(int i, int v) pour modifier le i-ième élément.
  */
 
-class IntegerContainer {
+class IntegerArray {
 	protected:
 		int *t;
 		int nb;
 	
 	public:
-		IntegerContainer();
-		~IntegerContainer();
+		IntegerArray();
+		~IntegerArray();
 		void pushback(int v);
 		int at(int i);
 		void clear();

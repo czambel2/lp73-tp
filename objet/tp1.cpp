@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "lib/IntegerContainer.h"
+#include "lib/IntegerArray.h"
 
 int main(int argc, char **argv) {
-	IntegerContainer* ic = new IntegerContainer();
+	IntegerArray* ic = new IntegerArray();
 
 	ic->display();
 	ic->pushback(5);

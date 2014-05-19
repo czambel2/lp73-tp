@@ -1,17 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "IntegerContainer.h"
+#include "IntegerArray.h"
 
-IntegerContainer::IntegerContainer() {
+IntegerArray::IntegerArray() {
 	t = new int[0];
 	nb = 0;
 }
 
-IntegerContainer::~IntegerContainer() {
+IntegerArray::~IntegerArray() {
 	delete[] t;
 }
 
-void IntegerContainer::pushback(int v) {
+void IntegerArray::pushback(int v) {
 	nb++;
 
 	int *newArray = new int[nb];
@@ -27,7 +27,7 @@ void IntegerContainer::pushback(int v) {
 	t = newArray;
 }
 
-int IntegerContainer::at(int i) {
+int IntegerArray::at(int i) {
 	if(i < nb) {
 		return t[i];
 	} else {
@@ -35,12 +35,12 @@ int IntegerContainer::at(int i) {
 	}
 }
 
-void IntegerContainer::clear() {
+void IntegerArray::clear() {
 	delete[] t;
 	nb = 0;
 }
 
-void IntegerContainer::popback() {
+void IntegerArray::popback() {
 	nb--;
 
 	int *newArray = new int[nb];
@@ -54,20 +54,20 @@ void IntegerContainer::popback() {
 	t = newArray;
 }
 
-int IntegerContainer::front() {
+int IntegerArray::front() {
 	return at(1);
 }
 
-int IntegerContainer::back() {
+int IntegerArray::back() {
 	return at(nb);
 }
 
-void IntegerContainer::set(int i, int v) {
+void IntegerArray::set(int i, int v) {
 	if(i >= nb || i < 0) return;
 	t[i] = v;
 }
 
-void IntegerContainer::display() {
+void IntegerArray::display() {
 	int i;
 	for(i = 0; i < nb; ++i) {
 		printf("%d", t[i]);
